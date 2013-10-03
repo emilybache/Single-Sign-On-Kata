@@ -7,3 +7,11 @@ The way it works is the first time you log in to any service, you give your user
 For this Kata, your job is to develop a new service, that uses the Single Sign On registry. The actual functionality of the service is simple - it says "Hello Emily!" (or whatever your name is) if your single sign on token is valid.
 
 The starting code here is the interface for the Single Sign On Registry.
+
+## Test Doubles
+
+This kata is useful for practicing using different kinds of test doubles. I have used it as a worked example in my book ["Mocks, Fakes and Stubs"](https://leanpub.com/mocks-fakes-stubs)
+
+## Credits
+
+The original design of this Kata was by Fredrik Wendt and he published it on [the codingdojo.org wiki](http://codingdojo.org/cgi-bin/wiki.pl?KataJEEWebAuthentication)
