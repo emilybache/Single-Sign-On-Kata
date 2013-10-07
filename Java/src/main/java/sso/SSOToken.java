@@ -1,3 +1,4 @@
+package sso;
 
 class SSOToken {
     
