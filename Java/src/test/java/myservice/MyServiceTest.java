@@ -11,9 +11,9 @@ import sso.Response;
 public class MyServiceTest {
 
 	@Test
-	public void foo() {
+	public void invalidSSOTokenIsRejected() {
 		MyService service = new MyService();
 		Response response = service.handleRequest(new Request("Foo", null));
-		assertEquals("hello Foo!", response.getText());
+		assertFalse("hello Foo!".equals(response.getText()));
 	}
 }
