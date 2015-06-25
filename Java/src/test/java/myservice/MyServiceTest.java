@@ -14,6 +14,6 @@ public class MyServiceTest {
     public void invalidSSOTokenIsRejected() {
         MyService service = new MyService(null);
         Response response = service.handleRequest(new Request("Foo", null));
-        assertFalse("hello Foo!".equals(response.getText()));
+        assertNotEquals("hello Foo!", response.getText());
     }
 }
