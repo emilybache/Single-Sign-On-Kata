@@ -5,7 +5,7 @@ import sso.Response;
 import sso.SingleSignOnRegistry;
 
 
-class MyService {
+class MyService(singleSignOnRegistry: SingleSignOnRegistry) {
 
   def handleRequest(request: Request): Response = {
     Response(s"hello ${request.name}!")
