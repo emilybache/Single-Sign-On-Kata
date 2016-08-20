@@ -14,4 +14,4 @@ This kata is useful for practicing using different kinds of test doubles. I have
 
 ## Credits
 
-The original design of this Kata was by Fredrik Wendt and he published it on [the codingdojo.org wiki](http://codingdojo.org/cgi-bin/wiki.pl?KataJEEWebAuthentication)
+The original design of this Kata was by Fredrik Wendt and he published it on [the codingdojo.org wiki](http://codingdojo.org/cgi-bin/index.pl?KataJEEWebAuthentication)
