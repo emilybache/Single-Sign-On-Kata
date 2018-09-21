@@ -10,11 +10,11 @@ namespace UnitTests
     public class Given_MyService
     {
         [TestMethod]
-        public void invalidSSOTokenIsRejected()
+        public void InvalidSSOTokenIsRejected()
         {
             MyService service = new MyService(null);
-            Response response = service.handleRequest(new Request("Foo", null));
-            Assert.AreNotEqual("hello Foo!", response.getText());
+            Response response = service.HandleRequest(new Request("Foo", null));
+            Assert.AreNotEqual("hello Foo!", response.GetText());
         }
     }
 }

@@ -9,14 +9,14 @@ namespace SingleSignOnKata.myservice
 {
     public class MyService
     {
-        private SingleSignOnRegistry registry;
+        private SingleSignOnRegistry _registry;
 
         public MyService(SingleSignOnRegistry registry)
         {
-            this.registry = registry;
+            this._registry = registry;
         }
 
-        public Response handleRequest(Request request)
+        public Response HandleRequest(Request request)
         {
             // TODO: check request has a valid SSOToken
             return new Response("hello " + request.getName() + "!");

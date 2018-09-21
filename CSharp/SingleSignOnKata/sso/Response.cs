@@ -15,7 +15,7 @@ namespace SingleSignOnKata.sso
             this.text = text;
         }
 
-        public String getText()
+        public String GetText()
         {
             return this.text;
         }
