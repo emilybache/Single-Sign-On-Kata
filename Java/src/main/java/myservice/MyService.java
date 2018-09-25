@@ -13,7 +13,10 @@ public class MyService {
     }
     
     public Response handleRequest(Request request) {
-        // TODO: check request has a valid SSOToken
+        if (!registry.is_valid(request.getSSOToken())) {
+            return new Response("Please sign in");
+        }
+
         return new Response("hello " + request.getName() + "!");
     }
 }
