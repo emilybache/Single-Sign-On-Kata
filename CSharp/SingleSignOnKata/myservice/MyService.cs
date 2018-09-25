@@ -18,7 +18,10 @@ namespace SingleSignOnKata.myservice
 
         public Response HandleRequest(Request request)
         {
-            // TODO: check request has a valid SSOToken
+            if (!_registry.IsValid(request.getSSOToken()))
+            {
+                return new Response("Please sign in before calling this service");
+            }
             return new Response("hello " + request.getName() + "!");
         }
     }
