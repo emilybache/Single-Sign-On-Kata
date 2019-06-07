@@ -12,10 +12,12 @@ class SingleSignOnRegistry:
     def unregister(self, token):
         """Remove the given token from current sessions"""
         pass
-      
+
+
 class SSOToken:
     pass        
-        
+
+
 def credentials_are_valid(credentials):
     """check the credentials by accessing LDAP or whatever"""
     return True

@@ -2,6 +2,7 @@ import unittest
 
 from my_service import *
 
+
 class MyServiceTest(unittest.TestCase):
 
     def test_invalidSSOTokenIsRejected(self):
