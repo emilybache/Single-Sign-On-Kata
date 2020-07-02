@@ -10,12 +10,12 @@ export class SingleSignOnRegistry {
     }
 
     //Returns True if the token refers to a current session
-    is_valid(token:string):boolean {
+    is_valid(token:SSOToken):boolean {
         return true
     }
 
     //Remove the given token from current session
-    unregister(token:string) {
+    unregister(token:SSOToken) {
 
     }
 }
