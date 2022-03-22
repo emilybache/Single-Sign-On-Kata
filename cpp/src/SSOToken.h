@@ -1,0 +1,12 @@
+
+
+#ifndef SINGLESIGNON_SSOTOKEN_H
+#define SINGLESIGNON_SSOTOKEN_H
+
+
+class SSOToken {
+
+};
+
+
+#endif //SINGLESIGNON_SSOTOKEN_H
