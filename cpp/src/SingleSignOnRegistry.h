@@ -3,19 +3,22 @@
 #ifndef SINGLESIGNON_SINGLESIGNONREGISTRY_H
 #define SINGLESIGNON_SINGLESIGNONREGISTRY_H
 
+#include <vector>
+#include "ISingleSignOnRegistry.h"
 
-#include <string>
-#include "SSOToken.h"
-#include "AuthenticationGateway.h"
+using namespace  std;
 
-using namespace std;
-
-class SingleSignOnRegistry {
+class SingleSignOnRegistry : public ISingleSignOnRegistry {
+private:
+    AuthenticationGateway* _gateway;
+    vector<SSOToken*>* _validTokens;
 public:
-    virtual SSOToken* register_new_session(string& userName, string& password) = 0;
-    virtual bool is_valid(SSOToken token) = 0;
-    virtual void unregister(SSOToken token) = 0;
-
+    explicit SingleSignOnRegistry(AuthenticationGateway* gateway): _gateway(gateway) {
+        _validTokens = new vector<SSOToken*>();
+    }
+    SSOToken* register_new_session(string& userName, string& password) override;
+    bool is_valid(SSOToken* token) override;
+    void unregister(SSOToken* token) override;
 };
 
 

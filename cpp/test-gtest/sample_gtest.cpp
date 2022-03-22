@@ -1,16 +1,16 @@
 #include <gtest/gtest.h>
-#include "SingleSignOnRegistry.h"
+#include "ISingleSignOnRegistry.h"
 #include "MyService.h"
 #include "SSOToken.h"
 #include "Request.h"
 #include "Response.h"
 #include "SingleSignOnRegistryTestDouble.h"
-
+#include "SingleSignOnRegistry.h"
 
 using namespace std;
 
 TEST(MyServiceTest, validTokenIsAccepted) {
-    auto registry = new SingleSignOnRegistryTestDouble(); // TODO: implement the Test Double
+    auto registry = new SingleSignOnRegistry(NULL);
     auto service = new MyService(registry);
     auto token = new SSOToken();
     auto response = service->handleRequest(new Request("Name", token));
