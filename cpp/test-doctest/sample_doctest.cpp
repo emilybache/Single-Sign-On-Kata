@@ -1,11 +1,9 @@
 #include "ApprovalTests.hpp"
 #include "doctest/doctest.h"
-#include "ISingleSignOnRegistry.h"
 #include "MyService.h"
 #include "SSOToken.h"
 #include "Request.h"
 #include "Response.h"
-#include "SingleSignOnRegistryTestDouble.h"
 #include "SingleSignOnRegistry.h"
 
 using namespace  std;

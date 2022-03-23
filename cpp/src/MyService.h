@@ -4,16 +4,16 @@
 #define SINGLESIGNON_MYSERVICE_H
 
 
-#include "ISingleSignOnRegistry.h"
+#include "SingleSignOnRegistry.h"
 #include "Response.h"
 #include "Request.h"
 
 class MyService {
 private:
-    ISingleSignOnRegistry* _registry;
+    SingleSignOnRegistry* _registry;
 
 public:
-    MyService(ISingleSignOnRegistry* registry): _registry(registry) {}
+    MyService(SingleSignOnRegistry* registry): _registry(registry) {}
 
     Response* handleRequest(Request* request);
 };
