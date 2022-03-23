@@ -8,13 +8,19 @@
 #include "SingleSignOnRegistryTestDouble.h"
 #include "SingleSignOnRegistry.h"
 
+using namespace  std;
 
 TEST_CASE ("MyService") {
     SUBCASE("valid token is accepted") {
-        auto registry = new SingleSignOnRegistry(NULL);
+        auto *gateway = new AuthenticationGateway();
+        auto registry = new SingleSignOnRegistry(gateway);
         auto service = new MyService(registry);
-        auto token = new SSOToken();
+        string userName = "username";
+        string password = "password";
+        auto token = registry->register_new_session(userName, password);
+
         auto response = service->handleRequest(new Request("Name", token));
+
         REQUIRE("hello Name!" == response->getText());
     }
 

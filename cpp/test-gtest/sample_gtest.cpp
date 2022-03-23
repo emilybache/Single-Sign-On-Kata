@@ -10,7 +10,7 @@
 using namespace std;
 
 TEST(MyServiceTest, validTokenIsAccepted) {
-    auto registry = new SingleSignOnRegistry(NULL);
+    auto registry = new SingleSignOnRegistry(new AuthenticationGateway());
     auto service = new MyService(registry);
     auto token = new SSOToken();
     auto response = service->handleRequest(new Request("Name", token));

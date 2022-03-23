@@ -17,6 +17,8 @@ private:
 public:
     Request(const string& name, SSOToken* token): _name(name), _token(token) {}
     string getName();
+
+    SSOToken *getToken();
 };
 
 

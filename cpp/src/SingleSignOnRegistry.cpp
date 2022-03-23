@@ -4,11 +4,11 @@
 
 SSOToken *SingleSignOnRegistry::register_new_session(string &userName, string &password) {
     if (_gateway->credentialsAreValid(userName, password)) {
-        SSOToken *token = new SSOToken();
+        auto *token = new SSOToken();
         _validTokens->push_back(token);
         return token;
     }
-    return NULL;
+    return nullptr;
 }
 
 bool SingleSignOnRegistry::is_valid(SSOToken* token) {

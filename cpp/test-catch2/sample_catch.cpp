@@ -12,7 +12,7 @@
 
 TEST_CASE ("MyService") {
     SECTION("valid token is accepted") {
-        auto registry = new SingleSignOnRegistry(NULL);
+        auto registry = new SingleSignOnRegistry(new AuthenticationGateway());
         auto service = new MyService(registry);
         auto token = new SSOToken();
         auto response = service->handleRequest(new Request("Name", token));

@@ -12,7 +12,7 @@ using namespace std;
  */
 class AuthenticationGateway {
 public:
-    virtual bool credentialsAreValid(string& username, string& password) = 0;
+    bool credentialsAreValid(string& username, string& password);
 };
 
 
