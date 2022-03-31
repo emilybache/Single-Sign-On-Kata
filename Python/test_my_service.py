@@ -1,15 +1,15 @@
-import unittest
 
 from my_service import *
+from single_sign_on import AuthenticationGateway
 
 
-class MyServiceTest(unittest.TestCase):
+def test_validSSOTokenIsAccepted():
+    authentication_gateway = AuthenticationGateway()
+    registry = SingleSignOnRegistry(authentication_gateway)
+    service = MyService(registry)
+    token = registry.register_new_session("username", "password")
 
-    def test_invalidSSOTokenIsRejected(self):
-        service = MyService(None)
-        response = service.handle_request(Request("Foo", None))
-        self.assertNotEqual("hello Foo!", response.text)
-        
-        
-if __name__ == "__main__":
-    unittest.main()
+    response = service.handle_request(Request("Foo", token))
+
+    assert "Hello Foo!" == response.text
+

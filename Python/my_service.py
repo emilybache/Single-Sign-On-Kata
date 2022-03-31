@@ -7,7 +7,8 @@ class MyService:
         self.sso_registry = sso_registry
     
     def handle_request(self, request):
-        # TODO: check token against SSORegistry
+        if not self.sso_registry.is_valid(request.token):
+            return Response("unauthorized")
         return Response("Hello {0}!".format(request.name))
 
 
