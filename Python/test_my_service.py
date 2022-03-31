@@ -3,7 +3,7 @@ from my_service import *
 from single_sign_on import AuthenticationGateway
 
 
-def test_validSSOTokenIsAccepted():
+def test_valid_sso_token_is_accepted():
     authentication_gateway = AuthenticationGateway()
     registry = SingleSignOnRegistry(authentication_gateway)
     service = MyService(registry)
