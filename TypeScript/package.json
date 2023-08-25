@@ -1,7 +1,7 @@
 {
   "name": "singlesignon",
   "version": "1.0.0",
-  "description": "\"The TypeScript versoin of the Single sign on kata\"",
+  "description": "The TypeScript version of the Single sign on kata",
   "main": "index.js",
   "scripts": {
     "test": "jest"
